@@ -16,7 +16,6 @@
     "@nuxtjs/pwa": "^3.0.0-beta.20",
     "firebase": "^7.19.1",
     "nuxt": "^2.14.0",
-    "vue-progressbar": "^0.7.5",
     "vue-sweetalert2": "^3.0.7",
     "vuelidate": "^0.7.5"
   },

@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <HeroSection title="Who is CagiMoto" />
+    <HeroSection title="Who is CagiMoto ??" />
     <v-container>
       <v-row justify="center" class="my-5">
         <v-col md="5" cols="12">
