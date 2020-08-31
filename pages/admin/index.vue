@@ -82,6 +82,7 @@ export default {
       })
     },
     setUpMessages (docs) {
+      this.messages = []
       docs.forEach((doc) => {
         this.messages.push(doc.data())
       })
