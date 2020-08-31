@@ -10,8 +10,8 @@
             </v-card-title>
             <v-divider class="my-2" />
             <v-form class="ma-5">
-              <v-text-field v-model="email" rounded label="Email" type="Email" />
-              <v-text-field v-model="password" rounded label="Password" type="password" />
+              <v-text-field v-model="email" prepend-icon="mdi-email" label="Email" type="Email" />
+              <v-text-field v-model="password" prepend-icon="mdi-lock" label="Password" type="password" />
               <v-card-actions>
                 <v-spacer />
                 <v-btn dark class="rounded" color="indigo darken-3 right" @click=" signIn">
@@ -57,10 +57,12 @@ export default {
       })
     },
     signIn () {
+      this.$nuxt.$loading.start()
       this.$fireAuth.signInWithEmailAndPassword(this.email, this.password).then((user) => {
-        console.log(user)
+        this.$nuxt.$loading.finish()
         this.$router.push({ path: '/admin' })
       }).catch((error) => {
+        this.$nuxt.$loading.finish()
         this.$swal(
           {
             icon: 'error',
