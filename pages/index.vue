@@ -22,7 +22,16 @@
           </v-col>
           <v-col sm="12" md="7" class="text-center ma-auto mt-5">
             <v-responsive>
-              <v-img src="/imgs/home.svg" />
+              <v-lazy
+                v-model="isActive"
+                :options="{
+                  threshold: .5
+                }"
+                min-height="150"
+                transition="fade-transition"
+              >
+                <v-img src="/imgs/home.svg" />
+              </v-lazy>
             </v-responsive>
             <div class="mt-5" />
           </v-col>

@@ -35,9 +35,18 @@
         <v-col v-for="tech in technologies" :key="tech.name" cols="6" sm="6" md="3">
           <v-hover v-slot:default="{hover}">
             <v-card class="text-center pa-5 elevation-0 tech-card " :class="{'hovered':hover}">
-              <v-avatar size="100">
-                <v-img :src="tech.icon" />
-              </v-avatar>
+              <v-lazy
+                v-model="isActive"
+                :options="{
+                  threshold: .5
+                }"
+                min-height="100"
+                transition="fade-transition"
+              >
+                <v-avatar size="100">
+                  <v-img :src="tech.icon" />
+                </v-avatar>
+              </v-lazy>
               <h4 class="text--darken-4 orange--text mt-5">
                 {{ tech.name }}
               </h4>
@@ -63,6 +72,7 @@ export default {
   },
   data () {
     return {
+      isActive: false,
       technologies: [
         {
           icon: '/imgs/flutter.png',
