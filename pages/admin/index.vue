@@ -1,7 +1,7 @@
 <template>
   <v-app>
-    <HeroSection title="Administration" />
-    <v-container>
+    <HeroSection v-show="user" title="Administration" />
+    <v-container v-show="user">
       <v-btn bottom fixed fab color="red" @click="logoutUser">
         <v-icon class="white--text">
           mdi-power-standby
@@ -55,7 +55,8 @@ export default {
         { text: 'message', value: 'message' },
         { text: 'Actions', value: 'actions', sortable: false }
       ],
-      messages: []
+      messages: [],
+      user: false
     }
   },
   mounted () {
@@ -66,6 +67,7 @@ export default {
       this.$fireAuth.onAuthStateChanged((user) => {
         if (user) {
           this.fetchMessages()
+          this.user = true
         } else {
           this.$router.push({ path: '/' })
         }
@@ -86,6 +88,7 @@ export default {
     },
     logoutUser () {
       this.$fireAuth.signOut()
+      this.user = false
     }
   }
 }
