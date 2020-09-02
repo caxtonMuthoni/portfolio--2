@@ -65,6 +65,17 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     'vue-sweetalert2/nuxt',
+    ['@nuxtjs/sitemap', {
+      path: '/sitemap.xml',
+      generate: false,
+      routes: [
+        '/',
+        '/about',
+        '/portfolio',
+        '/services',
+        '/contact'
+      ]
+    }],
     ['@nuxtjs/firebase',
       {
         config: {
