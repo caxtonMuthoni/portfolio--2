@@ -68,6 +68,7 @@ export default {
     ['@nuxtjs/sitemap', {
       path: '/sitemap.xml',
       generate: true,
+      hostname: 'https://www.cagimoto.ml',
       routes: [
         '/',
         '/about',
