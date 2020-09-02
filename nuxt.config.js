@@ -67,7 +67,7 @@ export default {
     'vue-sweetalert2/nuxt',
     ['@nuxtjs/sitemap', {
       path: '/sitemap.xml',
-      generate: false,
+      generate: true,
       routes: [
         '/',
         '/about',
