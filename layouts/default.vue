@@ -81,9 +81,10 @@
             :key="icon"
             class="mx-4 white--text"
             icon
+            :href="icon.link"
           >
             <v-icon size="24px">
-              {{ icon }}
+              {{ icon.icon }}
             </v-icon>
           </v-btn>
         </v-card-text>
@@ -130,10 +131,22 @@ export default {
   data () {
     return {
       icons: [
-        'mdi-facebook',
-        'mdi-twitter',
-        'mdi-linkedin',
-        'mdi-instagram'
+        {
+          icon: 'mdi-facebook',
+          link: 'https://www.facebook.com/caxton.mathitu/'
+        },
+        {
+          icon: 'mdi-twitter',
+          link: 'https://twitter.com/caxton_muthoni'
+        },
+        {
+          icon: 'mdi-linkedin',
+          link: 'https://www.linkedin.com/in/caxton-githinji-7b2444175/'
+        },
+        {
+          icon: 'mdi-instagram',
+          link: ''
+        }
       ],
       links: [
         {

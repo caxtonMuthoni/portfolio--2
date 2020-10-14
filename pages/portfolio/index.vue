@@ -42,11 +42,11 @@
                 <v-card-text> {{ web.description }}</v-card-text>
                 <v-card-actions>
                   <v-spacer />
-                  <v-btn outlined color="orange darken-4">
+                  <v-btn outlined color="orange darken-4" :href="web.link">
                     <v-icon left>
-                      mdi-arrow-right
+                      mdi-github
                     </v-icon>
-                    view
+                    view on github
                   </v-btn>
                 </v-card-actions>
               </v-col>
@@ -72,11 +72,11 @@
                 <v-card-text> {{ web.description }}</v-card-text>
                 <v-card-actions>
                   <v-spacer />
-                  <v-btn outlined color="orange darken-4">
+                  <v-btn outlined color="orange darken-4" :href="web.link">
                     <v-icon left>
-                      mdi-arrow-right
+                      mdi-github
                     </v-icon>
-                    view
+                    view on github
                   </v-btn>
                 </v-card-actions>
               </v-col>
@@ -102,11 +102,11 @@
                 <v-card-text> {{ web.description }}</v-card-text>
                 <v-card-actions>
                   <v-spacer />
-                  <v-btn outlined color="orange darken-4">
+                  <v-btn outlined color="orange darken-4" :href="web.link">
                     <v-icon left>
-                      mdi-google-play
+                      mdi-github
                     </v-icon>
-                    view in playstore
+                    view in github
                   </v-btn>
                 </v-card-actions>
               </v-col>
@@ -132,31 +132,36 @@ export default {
         {
           title: 'Intelligent Advisory System',
           description: 'A  online system that advises student on the best course depending on their performance',
-          image: '/imgs/portfolio/course.jpeg'
+          image: '/imgs/portfolio/course.jpeg',
+          link: 'https://github.com/caxtonMuthoni/courseadvisory'
         },
         {
           title: 'Internships system',
           description: 'A  system that simplifies internship processing for companies and interns. It simplify serching for internships',
-          image: '/imgs/portfolio/internship.png'
+          image: '/imgs/portfolio/internship.png',
+          link: ''
         }
       ],
       softwares: [
         {
           title: 'School LMS',
           description: 'An online platform that eases management and record keeping in a school',
-          image: '/imgs/portfolio/school.jpeg'
+          image: '/imgs/portfolio/school.jpeg',
+          link: ''
         },
         {
           title: 'E Banking System',
           description: 'An online wallet that helps in making payments and ease transactions in East Africa  ',
-          image: '/imgs/portfolio/webbank.jpeg'
+          image: '/imgs/portfolio/webbank.jpeg',
+          link: 'https://github.com/caxtonMuthoni/mobile-banking-admin'
         }
       ],
       mobiles: [
         {
           title: 'Mbanking App',
           description: 'An IOS & android application used in mobile banking.',
-          image: '/imgs/portfolio/banking.jpeg'
+          image: '/imgs/portfolio/banking.jpeg',
+          link: 'https://github.com/caxtonMuthoni/mbanking'
         }
       ]
     }
