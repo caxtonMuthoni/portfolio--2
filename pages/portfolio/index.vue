@@ -128,6 +128,7 @@ export default {
   },
   data () {
     return {
+      title: 'Caxton Muthoni\'s projects and Achievements',
       webs: [
         {
           title: 'Intelligent Advisory System',
@@ -162,6 +163,19 @@ export default {
           description: 'An IOS & android application used in mobile banking.',
           image: '/imgs/portfolio/banking.jpeg',
           link: 'https://github.com/caxtonMuthoni/mbanking'
+        }
+      ]
+    }
+  },
+  head () {
+    return {
+      title: this.title,
+      meta: [
+        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+        {
+          hid: 'portfolio',
+          name: 'Caxton Muthoni G Projects',
+          content: 'This is what Caxton Muthoni has done'
         }
       ]
     }

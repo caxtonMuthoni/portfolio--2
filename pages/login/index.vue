@@ -45,7 +45,7 @@ export default {
       this.$fireAuth.createUserWithEmailAndPassword(
         'githinjicaxton323@gmail.com', 'cagimu865admin'
       ).then(() => {
-        console.log('User created successfully !!!')
+        // console.log('User created successfully !!!')
       }).catch((error) => {
         this.$swal(
           {

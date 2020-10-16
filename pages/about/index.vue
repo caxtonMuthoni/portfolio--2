@@ -9,6 +9,8 @@
           </h3>
           <v-divider class="my-5" />
           <p class="my-5 text-body-1">
+            <b class="indigo--text text--darken-3">Cagi</b> stands for <i>Caxton G.</i>  <br>
+            <b class="orange--text text--darken-3">Moto</b> means <i>All ways burning</i> <br>
             My goal is to create a product that will provide the maximum value for the client’s investment.
             To accomplish this, I develop a consultant mindset that lets me delve
             into the business context and closely manage my time, my clients’ needs, and budget. Through innovative
@@ -73,6 +75,7 @@ export default {
   data () {
     return {
       isActive: false,
+      title: 'About Caxton G. Muthoni',
       technologies: [
         {
           icon: '/imgs/flutter.png',
@@ -113,6 +116,19 @@ export default {
           icon: '/imgs/graphql.png',
           name: 'Graphql',
           use: 'API development'
+        }
+      ]
+    }
+  },
+  head () {
+    return {
+      title: this.title,
+      meta: [
+        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+        {
+          hid: 'abou',
+          name: 'Caxton Muthoni G About',
+          content: 'Who is is Caxton Muthoni ?'
         }
       ]
     }

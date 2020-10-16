@@ -143,6 +143,7 @@ export default {
     email: { required, email }
   },
   data: () => ({
+    title: 'Get in touch with Caxton',
     name: '',
     email: '',
     subject: '',
@@ -213,6 +214,19 @@ export default {
       this.email = ''
       this.subject = ''
       this.message = ''
+    }
+  },
+  head () {
+    return {
+      title: this.title,
+      meta: [
+        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+        {
+          hid: 'contact',
+          name: 'Caxton Muthoni G contacts',
+          content: 'Get in touch with caxton muthoni now'
+        }
+      ]
     }
   }
 

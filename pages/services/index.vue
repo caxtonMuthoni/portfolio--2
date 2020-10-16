@@ -61,6 +61,7 @@ export default {
   },
   data () {
     return {
+      title: 'Services and technologies offered by Caxton Muthoni',
       services: [
         {
           title: 'Web Development',
@@ -81,6 +82,19 @@ export default {
           title: 'Realtime Application Development',
           description: 'Get unique real-time reporting applications  that functions within a time frame that the user senses as immediate or current.',
           icon: 'mdi-clock'
+        }
+      ]
+    }
+  },
+  head () {
+    return {
+      title: this.title,
+      meta: [
+        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+        {
+          hid: 'services',
+          name: 'Caxton Muthoni G services',
+          content: 'Services and technologies offered by caxton muthoni'
         }
       ]
     }

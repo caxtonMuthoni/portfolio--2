@@ -3,7 +3,7 @@
     <v-row class="mt-5">
       <v-col cols="12" md="6" class="ma-auto">
         <div class="my-auto ma-5">
-           <span class="caption text-uppercase indigo--text text--darken-3 mb-0">Cagimoto</span>
+          <span class="caption text-uppercase indigo--text text--darken-3 mb-0">Cagimoto</span>
           <h1 class="indigo--text text--darken-3 mb-5">
             {{ title }}
           </h1>

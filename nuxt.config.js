@@ -26,7 +26,10 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
-      { href: 'https://fonts.googleapis.com/css2', rel: 'stylesheet' }
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Rubik:wght@500&display=swap'
+      }
     ]
   },
   loading: {

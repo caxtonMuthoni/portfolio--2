@@ -12,8 +12,8 @@
       <v-divider />
       <v-list dense>
         <v-list-item
-          v-for="item in links"
-          :key="item.title"
+          v-for="(item, index) in links"
+          :key="index"
           router
           :to="item.to"
         >
@@ -44,8 +44,8 @@
       <v-spacer />
       <v-toolbar-items class="hidden-md-and-down">
         <v-btn
-          v-for="link in links"
-          :key="link.link"
+          v-for="(link, index) in links"
+          :key="index"
           router
           :to="link.to"
           text
@@ -77,8 +77,8 @@
       >
         <v-card-text>
           <v-btn
-            v-for="icon in icons"
-            :key="icon"
+            v-for="(icon, index) in icons"
+            :key="index"
             class="mx-4 white--text"
             icon
             :href="icon.link"
@@ -216,7 +216,9 @@ export default {
 }
 </style>
 <style>
-   h1,h2,h3,h4,h5,.heading{
-     font-family: 'Times New Roman', Times, serif !important;
+   html{
+     font-family: 'Lato', sans-serif  !important;
+     font-weight: 300 !important;
+     text-rendering: optimizeLegibility;
    }
 </style>

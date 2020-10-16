@@ -1,47 +1,42 @@
 <template>
   <v-app light class="pa-0">
     <div class="hero">
-      <v-container>
-        <v-row justify="center">
-          <v-col sm="12" md="5" class="text-left ma-auto pa-5">
-            <p class="orange--text text--darken-4 text-subtitle-2 text-uppercase">
-              Get All Tech solutions
-            </p>
-            <p class="indigo--text text--darken-4 text-md-h4 text-sm-h6 myfont">
-              MUTHONI G. CAXTON <br>
-              Software Engineer
-            </p>
-            <p class="text-subtitle-2 text-left myfont2">
-              My goal is to create a product that will provide the maximum value for the client’s investment.
-              To accomplish this, I develop a consultant mindset that lets me delve
-              into the business context and closely manage my time, my clients’ needs, and budget.
-            </p>
-            <v-btn rounded depressed route to="/portfolio" class="text-capitalize orange darken-4 white--text mt-5">
-              View my previous work
-            </v-btn>
-          </v-col>
-          <v-col sm="12" md="7" class="text-center ma-auto mt-5">
-            <v-responsive>
-              <v-lazy
-                v-model="isActive"
-                :options="{
-                  threshold: .5
-                }"
-                min-height="150"
-                transition="fade-transition"
-              >
-                <v-img src="/imgs/home.svg" />
-              </v-lazy>
-            </v-responsive>
-            <div class="mt-5" />
-          </v-col>
-          <v-col cols="12" md="10" class="ma-5 pa-5 hidden-sm-and-down">
-            <v-banner two-line>
-              <span class="text-h6 indigo--text text--darken-4">“Optimism is an occupational hazard of programming: feedback is the treatment. “ Kent Beck</span>
-            </v-banner>
-          </v-col>
-        </v-row>
-      </v-container>
+      <div class="image-overay">
+        <v-container>
+          <v-row justify="center" class="content-container">
+            <v-col sm="12" lg="7" class="text-left ma-auto pa-5">
+              <p class="orange--text text--darken-4 text-subtitle-2 text-uppercase">
+                Get All Tech solutions
+              </p>
+              <h1 class="my-name indigo--text text--darken-4">
+                MUTHONI G. CAXTON
+              </h1>
+              <p class="occupation indigo--text text--darken-4">
+                I’m an innovative software engineer with 7+ years of experience managing all aspects of the development process for small to medium-sized companies
+              </p>
+              <v-btn rounded depressed route to="/portfolio" class="text-capitalize orange darken-4 white--text mt-2 ">
+                View my previous work
+              </v-btn>
+              <div class="stretch-big" />
+            </v-col>
+            <v-col sm="12" lg="5" class="text-center ma-aut">
+              <v-responsive>
+                <v-lazy
+                  v-model="isActive"
+                  :options="{
+                    threshold: .5
+                  }"
+                  min-height="150"
+                  transition="fade-transition"
+                >
+                  <v-img src="/imgs/home.png" class="img-home" />
+                </v-lazy>
+              </v-responsive>
+              <div class="mt-5" />
+            </v-col>
+          </v-row>
+        </v-container>
+      </div>
     </div>
     <v-container class="my-5">
       <v-row justify="center" class="mb-5 row-contents">
@@ -154,28 +149,67 @@ export default {
   },
   data () {
     return {
+      title: 'Caxton G. Muthoni, Software developer',
       web: 98,
       software: 96,
       realtime: 90,
       mobileapp: 99,
       isActive: false
     }
+  },
+  head () {
+    return {
+      title: this.title,
+      meta: [
+        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+        {
+          hid: 'home',
+          name: 'Caxton Muthoni G homepage',
+          content: 'This is caxton muthoni\'s portfolio'
+        }
+      ]
+    }
   }
 }
 </script>
 
 <style scoped>
-   .hero{
-     background-image: url('/imgs/wave.svg');
-     background-size: cover;
-     height: 100vh;
-     background-repeat: no-repeat;
-     background-position: fixed;
-   }
+.my-name{
+   font-family: 'Rubik',Arial, sans-serif ;
+   font-weight: 400;
+   text-rendering: optimizeLegibility;
+   font-size: 52px;
+}
+.occupation{
+   font-family: 'Lato',Arial, sans-serif ;
+   font-weight: 300;
+   text-rendering: optimizeLegibility;
+   font-size: 32px;
+   line-height: 45px;
+}
+.hero{
+  background-image: url('/imgs/wave.svg');
+  background-size: cover;
+  height: auto;
+  background-repeat: no-repeat;
+  background-position: fixed;
+}
+.image-overay{
+  background: rgba(255, 138, 4, 0.58);
+  height: 100%;
+}
+.content-container{
+  margin-top: 80px;
+}
+.img-home{
+  border-radius: 50px;
+}
+
 .about{
   background-image: url('/imgs/about.svg');
   background-size: cover;
   height: 50vh;
+  background-position: center
 }
 .section{
   background-image: url('/imgs/section.jpg');
@@ -185,19 +219,28 @@ export default {
 .inner-row{
   height: 100%;
 }
-.myfont{
-  font-family: 'Cormorant Garamond', serif !important;
-}
-.myfont2{
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
 .card-border{
   border: 1px solid rgba(155, 155, 155, 0.651);
 }
 @media screen and (min-width: 760px) {
+  .stretch-big{
+    height: 150px;
+  }
   .row-contents{
     width: 90%;
     margin-left: 5%;
   }
+}
+@media screen  and (max-width: 760px){
+  .content-container{
+   margin-top: 35px;
+ }
+ .my-name {
+   font-size: 30px;
+ }
+ .occupation{
+   font-size: 20px;
+   line-height: 30px;
+ }
 }
 </style>
