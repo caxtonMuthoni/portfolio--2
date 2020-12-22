@@ -156,7 +156,6 @@ export default {
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         {
-          hid: 'description',
           name: 'description',
           content:
             ' I’m an innovative software engineer with 7+ years of experience managing all aspects of the development process for small to medium-sized companies'

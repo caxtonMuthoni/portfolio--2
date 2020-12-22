@@ -1,3 +1,5 @@
+I’m an innovative software engineer with 7+ years of experience managing all aspects of the development process for small to medium-sized companies. I am a geek. I love computers. I love everything about them. I spend eight to ten hours a day in front of a computer screen as I am coding, debugging, or discussing coding practices and methods with other programmers.
+
 # portfolio
 
 ## Build Setup

@@ -17,13 +17,12 @@ export default {
   ** See https://nuxtjs.org/api/configuration-head
   */
   head: {
-    titleTemplate: '%s - Caxton G. Muthoni|Software developer ',
+    // titleTemplate: '%s - Caxton G. Muthoni|Software developer ',
     title: 'Caxton G. Muthoni|Software developer',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
-        hid: 'description',
         name: 'description',
         content: ' I’m an innovative software engineer with 7+ years of experience managing all aspects of the development process for small to medium-sized companies'
       },
