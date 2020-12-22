@@ -27,28 +27,32 @@
           </p>
         </v-col>
       </v-row>
-      <v-row>
-        <v-col md="10" cols="12">
-          <h2 class="indigo--text text--darken-3 ma-5">
-            Services Provided
-          </h2>
-          <v-divider class="my-4" />
-        </v-col>
-        <v-col v-for="service in services" :key="service.icon" cols="12" md="6">
-          <div class="indigo--text text--darken-3 text-body-2 mx-5">
-            <h3 class="d-flex flex-row">
-              <v-icon left class="indigo--text text--darken-3">
-                {{ service.icon }}
-              </v-icon> <span class="my-auto">{{ service.title }}</span>
-            </h3>
-          </div>
-          <p class="ma-5 text-body-1">
-            {{ service.description }}
-          </p>
-        </v-col>
-      </v-row>
     </v-container>
-    <Hestate />
+    <div class="services">
+      <v-container>
+        <v-row>
+          <v-col md="10" cols="12">
+            <h2 class="indigo--text text--darken-3 ma-5">
+              Services Provided
+            </h2>
+            <v-divider class="my-4" />
+          </v-col>
+          <v-col v-for="service in services" :key="service.icon" cols="12" md="6">
+            <div class="indigo--text text--darken-3 text-body-2 mx-5">
+              <h3 class="d-flex flex-row">
+                <v-icon left class="indigo--text text--darken-3">
+                  {{ service.icon }}
+                </v-icon> <span class="my-auto">{{ service.title }}</span>
+              </h3>
+            </div>
+            <p class="ma-5 text-body-1">
+              {{ service.description }}
+            </p>
+          </v-col>
+        </v-row>
+      </v-container>
+    </div>
+    <Hestate class="hestate" />
   </v-app>
 </template>
 <script>
@@ -102,3 +106,12 @@ export default {
 
 }
 </script>
+
+<style scoped>
+  .services{
+    background: #f4f4f4;
+  }
+  .hestate{
+    margin: 0 !important;
+  }
+</style>

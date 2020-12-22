@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid>
+  <div>
     <div class="section pa-5">
       <v-row class="ma-auto inner-row text-center pa-5" justify="center" align="center">
         <v-col cols="11" sm="12" lg="8" class="ma-auto">
@@ -21,7 +21,7 @@
         </v-col>
       </v-row>
     </div>
-  </v-container>
+  </div>
 </template>
 
 <style scoped>

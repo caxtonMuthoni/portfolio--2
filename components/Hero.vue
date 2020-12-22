@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid class="hero-section mt-5">
+  <div class="hero-section mt-5">
     <v-row class="mt-5">
       <v-col cols="12" md="6" class="ma-auto">
         <div class="my-auto ma-5">
@@ -12,7 +12,7 @@
       </v-col>
       <v-col cols="12" md="6" style="height:30vh" />
     </v-row>
-  </v-container>
+  </div>
 </template>
 <script>
 export default {

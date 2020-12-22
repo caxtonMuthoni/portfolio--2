@@ -38,6 +38,7 @@
       inverted-scroll
       fixed
       color="white"
+      class="elevation-0 app-bar"
     >
       <v-app-bar-nav-icon class="hidden-md-and-up" @click="drawer= !drawer" />
       <v-toolbar-title><b class="indigo--text text--darken-3">Cagi</b><b class="orange--text text--darken-3">Moto</b> </v-toolbar-title>
@@ -144,8 +145,8 @@ export default {
           link: 'https://www.linkedin.com/in/caxton-githinji-7b2444175/'
         },
         {
-          icon: 'mdi-instagram',
-          link: ''
+          icon: 'mdi-whatsapp',
+          link: 'https://api.whatsapp.com/send?phone=+254743751575'
         }
       ],
       links: [
@@ -214,6 +215,10 @@ export default {
 .v-list-item--active{
    color: orangered;
 }
+.app-bar{
+     display: block;
+     border-bottom: 1px solid #d4d4d4 !important;
+   }
 </style>
 <style>
    html{
@@ -221,4 +226,5 @@ export default {
      font-weight: 300 !important;
      text-rendering: optimizeLegibility;
    }
+
 </style>

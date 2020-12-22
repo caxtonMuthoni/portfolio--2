@@ -1,4 +1,5 @@
 import colors from 'vuetify/es5/util/colors'
+// import ogImage from '/imgs/home.png';
 
 export default {
   /*
@@ -16,13 +17,18 @@ export default {
   ** See https://nuxtjs.org/api/configuration-head
   */
   head: {
-    titleTemplate: '%s - ' + process.env.npm_package_name,
-    title: process.env.npm_package_name || '',
+    titleTemplate: '%s - Caxton G. Muthoni|Software developer ',
+    title: 'Caxton G. Muthoni|Software developer',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' },
+      {
+        hid: 'description',
+        name: 'description',
+        content: ' I’m an innovative software engineer with 7+ years of experience managing all aspects of the development process for small to medium-sized companies'
+      },
       { name: 'google-site-verification', content: 'YSkrq7cuBs2kFj7hPwp897439El7SDuib85NvSYYpwE' }
+      // { hid: 'og:image', property: 'og:image', content: this.BASE_URL+ ogImage }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },

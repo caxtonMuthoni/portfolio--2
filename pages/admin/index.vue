@@ -19,7 +19,7 @@
         <template v-slot:top>
           <v-switch v-model="singleSelect" label="Single select" class="pa-3" />
         </template>
-        <template v-slot:item.actions="{ item }">
+        <template v-slot:[`item.actions`]="{ item }">
           <a class="link-item orange--text text--darken-4" :href="'mailto:' + item.email">
             Mail
             <v-icon
@@ -100,5 +100,16 @@ export default {
     font-weight: bold;
     font-family: 'Courier New', Courier, monospace;
 }
-
 </style>
+© 2020 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
