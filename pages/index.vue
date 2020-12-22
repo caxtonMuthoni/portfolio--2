@@ -205,7 +205,7 @@ export default {
     return {
       title: this.title,
       meta: [
-        { charset: 'wfewf' },
+        { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         {
           hid: 'description',
@@ -299,9 +299,6 @@ export default {
   .my-name {
     font-size: 30px;
   }
-.services{
-  background: rgb(221, 221, 221);
-}
   .occupation {
     font-size: 20px;
     line-height: 30px;

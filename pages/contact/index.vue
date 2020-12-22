@@ -149,6 +149,26 @@ export default {
     subject: '',
     message: ''
   }),
+  head () {
+    return {
+      title: this.title,
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            ' I’m an innovative software engineer with 7+ years of experience managing all aspects of the development process for small to medium-sized companies'
+        },
+        {
+          name: 'google-site-verification',
+          content: 'YSkrq7cuBs2kFj7hPwp897439El7SDuib85NvSYYpwE'
+        },
+        { hid: 'og:image', property: 'og:image', content: '/imgs/home.png' }
+      ]
+    }
+  },
   computed: {
     nameErrors () {
       const errors = []
@@ -214,19 +234,6 @@ export default {
       this.email = ''
       this.subject = ''
       this.message = ''
-    }
-  },
-  head () {
-    return {
-      title: this.title,
-      meta: [
-        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
-        {
-          hid: 'contact',
-          name: 'Caxton Muthoni G contacts',
-          content: 'Get in touch with caxton muthoni now'
-        }
-      ]
     }
   }
 
